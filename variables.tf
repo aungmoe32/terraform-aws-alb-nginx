@@ -1,4 +1,3 @@
-
 variable "aws_region" {
   description = "AWS region"
   type        = string
@@ -11,9 +10,10 @@ variable "instance_type" {
   default     = "t2.micro"
 }
 
+# Common local variables
 locals {
-  anywhere     = "0.0.0.0/0"
-  all_ports    = "-1"
-  ssh_port     = 22
   tcp_protocol = "tcp"
+  all_ports    = "-1"
+  anywhere     = "0.0.0.0/0"
+  ssh_port     = 22
 }
